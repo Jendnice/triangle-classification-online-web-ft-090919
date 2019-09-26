@@ -11,7 +11,7 @@ class Triangle
   def kind 
     if @a <= 0 || @b <= 0 || @c <= 0 || 
       (@a + @b <= @c) || (@a + @c <= @b) || (@b + @c <= @a)
-      raise TriangeError 
+      raise Triangle::TriangeError 
     elsif @a == @b && @b == @c && @a == @c 
       :equilateral 
     elsif (@a == @b && !(@a == @c)) || (@a == @c && !(@a ==@b)) || (@c == @b && !(@c == @a)) 
