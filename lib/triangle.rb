@@ -14,7 +14,7 @@ class Triangle
       raise TriangeError 
     elsif @a == @b && @b == @c && @a == @c 
       :equilateral 
-    elsif @a == @b while !(@a == @c) || @a == @c while !(@a ==@b) || @c == @b while !(@c == @a) 
+    elsif (@a == @b && !(@a == @c)) || (@a == @c && !(@a ==@b)) || (@c == @b && !(@c == @a)) 
       :isosceles
     else 
       :scalene
